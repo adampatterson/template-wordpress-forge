@@ -51,9 +51,9 @@
 !/wp-content/themes/new-project
 
 # All the rest
-/vendor
 .DS_Store
-.idea
+/vendor
+/.idea
 /src
 /wp-content/themes/beaumont/mix-manifest.json
 
