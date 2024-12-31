@@ -1,0 +1,9 @@
+{
+  "name": "adampatterson/template-forge-wordpress",
+  "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "vlucas/phpdotenv": "^5.6"
+  }
+}
