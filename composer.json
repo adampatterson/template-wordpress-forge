@@ -1,5 +1,5 @@
 {
-  "name": "adampatterson/template-forge-wordpress",
+  "name": "adampatterson/template-wordpress-forge",
   "type": "project",
   "minimum-stability": "dev",
   "prefer-stable": true,
