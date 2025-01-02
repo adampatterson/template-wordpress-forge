@@ -1,6 +1,6 @@
 # WordPress Forge Template Repo
 
-TLDR; You can skip to meat and potatoes [here](#forge)
+TLDR; Skip to meat and potatoes [here](#forge)
 
 ### About this template
 
