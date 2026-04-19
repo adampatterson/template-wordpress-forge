@@ -36,7 +36,7 @@ endif;
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', env('DB_NAME', 'beaumont_wordpress'));
+define('DB_NAME', env('DB_NAME', 'wordpress'));
 define('DB_USER', env('DB_USER', 'root'));
 define('DB_PASSWORD', env('DB_PASSWORD', 'root'));
 define('DB_HOST', env('DB_HOST', 'localhost'));
