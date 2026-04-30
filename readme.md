@@ -4,7 +4,8 @@ TLDR; You can skip to meat and potatoes [here](#forge)
 
 ### About this template
 
-_Note: We're assuming a working local development environment, a basic knowledge of Git, and how to use Laravel Forge._
+> [!NOTE]
+> We're assuming a working local development environment, a basic knowledge of Git, and how to use Laravel Forge.
 
 Setting up WordPress on Forge isn't that complicated, but the default method has a couple of drawbacks.
 
@@ -75,7 +76,8 @@ On a new project you can run `composer run-script update-salts` which will updat
 If you need to add constants of your own to `wp-config.php` then you can do so by adding them to the `.env` file and then modifying your
 `wp-config.php` file.
 
-_Note: Since your sensitive data is in the `.env` file your `wp-config.php` **SHOULD** be in version control!_
+> [!NOTE]
+> Since your sensitive data is in the `.env` file your `wp-config.php` **SHOULD** be in version control!
 
 **See:**
 
@@ -86,7 +88,7 @@ You can also add the serial numbers for ACF Pro and Gravity Forms.
 
 ### Install WordPress
 
-To do this we're going to make use of the [WP CLI](https://wp-cli.org).
+To do this, we're going to make use of the [WP CLI](https://wp-cli.org).
 
 ```shell
 brew install wp-cli
@@ -101,7 +103,8 @@ wp core download
  wp core install --url=new_project.local --title="New Project" --admin_user=adminuser --admin_password=top-secret-password --admin_email=hello@domain.com
 ```
 
-_Note the space at the start of the commands. This will prevent the command from logging in your `history`._
+> [!NOTE]
+> The space at the start of the commands. This will prevent the command from logging in your `history`.
 
 ## Theme:
 
@@ -170,7 +173,7 @@ cd wp-content/themes/new-project
 npm i && php composer i && npm run prod
 ```
 
-## Forge
+## Deployment / Forge
 
 Once the server has been provisioned, create a site, choose **PHP / Laravel / Synfony** as the Project Type.
 
@@ -216,7 +219,14 @@ wp core download
  wp core install --url=new_project.domain.com --title="New Project" --admin_user=adminuser --admin_password="top-secret-password" --admin_email=hello@domain.com
 ```
 
+> [!NOTE]
+> The space at the start of the commands. This will prevent the command from logging in your `history`.
+
 ### Forge Deployment
+
+Make sure to toggle "Make .env variables available to deployment script".
+
+This will allow Node access to environment variables during private package installation, for example.
 
 ```shell
 cd /home/forge/new_project.domain.com
@@ -230,6 +240,8 @@ $FORGE_COMPOSER install --no-dev --no-interaction --prefer-dist --optimize-autol
 # Updates composer in the theme root.
 cd /home/forge/new_project.domain.com/wp-content/themes/new-project
 $FORGE_COMPOSER install --no-interaction --prefer-dist --optimize-autoloader
+
+#npm config set '//npm.fontawesome.com/:_authToken' ${FONTAWESOME_NPM_AUTH_TOKEN}
 
 npm install
 npm run prod
