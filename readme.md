@@ -1,6 +1,6 @@
 # WordPress Forge Template Repo
 
-TLDR; You can skip to meat and potatoes [here](#forge)
+TLDR; Skip to the meat and potatoes [here](#forge)
 
 ### About this template
 
@@ -9,23 +9,23 @@ TLDR; You can skip to meat and potatoes [here](#forge)
 
 Setting up WordPress on Forge isn't that complicated, but the default method has a couple of drawbacks.
 
-* The deployments provided by Forge will not work, meaning no manual or auto deployments.
-* You'll need to log in to the server to make updates to your `wp-config.php` file.
+- The deployments provided by Forge will not work, meaning no manual or auto deployments.
+- You'll need to log in to the server to make updates to your `wp-config.php` file.
 
 This template solves these problems by allowing you to use Forge deployments, and manage the environment.
 
 ### Table of Contents
 
-* [Using the template](#using-the-template)
-* [Local Setup](#local-setup)
-    * [Configuring the site](#configuring-the-site)
-    * [Install WordPress](#install-wordpress)
-* [Theme](#theme)
-    * [Git](#git)
-    * [Composer](#composer)
-* [Forge](#forge)
-    * [Installing the WP CLI](#installing-the-wp-cli)
-    * [Forge Deployment](#forge-deployment)
+- [Using the template](#using-the-template)
+- [Local Setup](#local-setup)
+  - [Configuring the site](#configuring-the-site)
+  - [Install WordPress](#install-wordpress)
+- [Theme](#theme)
+  - [Git](#git)
+  - [Composer](#composer)
+- [Forge](#forge)
+  - [Installing the WP CLI](#installing-the-wp-cli)
+  - [Forge Deployment](#forge-deployment)
 
 ## Using the template
 
@@ -43,8 +43,8 @@ gh auth login
 
 The first command will create a new repository in your account.
 
-* If you'd like to create the repository in your authenticated users account then you can remove the organization path.
-* If you'd like to create a public repository, remove the `--private` flag.
+- If you'd like to create the repository in your authenticated users account then you can remove the organization path.
+- If you'd like to create a public repository, remove the `--private` flag.
 
 The second command will clone the repo as `/new_project.local`
 
@@ -142,12 +142,8 @@ As an example, if you wanted to load the `Axe` and `Handle` theme, you would add
   ],
   "extra": {
     "installer-paths": {
-      "wp-content/plugins/{$name}/": [
-        "type:wordpress-plugin"
-      ],
-      "wp-content/themes/{$name}/": [
-        "type:wordpress-theme"
-      ]
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
     }
   },
   "config": {
@@ -179,7 +175,7 @@ Once the server has been provisioned, create a site, choose **PHP / Laravel / Sy
 
 Select create Database if you don't already have one.
 
-Make sure to change the web root from `/public`  to `/`
+Make sure to change the web root from `/public` to `/`
 
 Click **Add Site**.
 
@@ -190,8 +186,8 @@ Connect the repository to Forge and choose the branch you want to deploy.
 
 De-select **Run Laravel Migrations**, the next steps are situational, and specific to your project.
 
-* You can select your database,
-* You can choose to install composer dependencies
+- You can select your database,
+- You can choose to install composer dependencies
 
 An example repository is [available here](https://github.com/adampatterson/template-wordpress-forge). The big difference
 here is that our Git repository is nearly empty with only our theme in `wp-content/themes/new-project`.
